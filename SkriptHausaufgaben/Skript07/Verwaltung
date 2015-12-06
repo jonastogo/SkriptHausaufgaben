@@ -90,10 +90,8 @@ def newbe():
     benutzer.append((x,split[0],split[1]))#HIER FEHLT NOCH WAS!!!!! KANN NICHT BENUTZT WERDEN
     benutzerlist.insert("end",split[0]+", "+split[1])
     text2.delete(0,"end")
-
 def auswahlaus():
     ausgabe3["text"]="Auswahl: "+ausleihlist.get("active")
-
 def ausleihe():
     lt=localtime()
     jahr,monat,tag=lt[0:3]
@@ -156,10 +154,10 @@ buchlist.grid(row=0, column=1,columnspan=5,sticky=W+E+N+S)
 neubu=tkinter.Button(main,text="Neues Buch",command=newbuch)
 neubu.grid(row=3,column=2,sticky=W+E+N+S)
 
-loeschbu=tkinter.Button(main, text="Buch Loeschen",command=buchloeschen)
+loeschbu=tkinter.Button(main, text="Buch Löschen",command=buchloeschen)
 loeschbu.grid(row=3,column=3,sticky=W+E+N+S)
 
-auswahlbu=tkinter.Button(main,text="Auswaehlen", command=auswahlbu)
+auswahlbu=tkinter.Button(main,text="Auswählen", command=auswahlbu)
 auswahlbu.grid(row=2,column=2,columnspan=2,sticky=W+E+N+S)
 
 ausgabe1=Label(main)
@@ -177,10 +175,10 @@ benutzerlist.grid(row=0,column=6,columnspan=5,sticky=W+E+N+S)
 neube=tkinter.Button(main,text="Neuer Benutzer",command=newbe)
 neube.grid(row=3,column=7,sticky=W+E+N+S)
 
-loeschbe=tkinter.Button(main, text="Benutzer Loeschen",command=beloeschen)
+loeschbe=tkinter.Button(main, text="Benutzer Löschen",command=beloeschen)
 loeschbe.grid(row=3,column=8,sticky=W+E+N+S)
 
-auswahlbe=tkinter.Button(main,text="Auswaehlen", command=auswahlbe)
+auswahlbe=tkinter.Button(main,text="Auswählen", command=auswahlbe)
 auswahlbe.grid(row=2,column=7,columnspan=2,sticky=W+E+N+S)
 
 ausgabe2=Label(main)
@@ -203,7 +201,7 @@ ruekgabe.grid(row=3,column=13,sticky=W+E+N+S)
 knopf=tkinter.Button(main, text="Ende",command=ende)
 knopf.grid(row=8,column=1,columnspan=16,sticky=W+E+N+S)
 
-auswahlau=tkinter.Button(main,text="Auswaehlen", command=auswahlaus)
+auswahlau=tkinter.Button(main,text="Auswählen", command=auswahlaus)
 auswahlau.grid(row=2,column=12,columnspan=2,sticky=W+E+N+S)
 
 ausgabe3=Label(main)
