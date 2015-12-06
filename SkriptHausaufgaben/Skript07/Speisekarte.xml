@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Speisekarte>
+  <Vorspeise><u>Vorspeise: </u><br/>
+    <speise>Salat</speise>
+    <preis>100<br/></preis>
+  </Vorspeise>
+  <Hauptgericht><u>Hauptgericht:</u><br/>
+    <speise>Rinderrücken</speise>
+    <preis>1700<br/></preis>
+  </Hauptgericht>
+<Nachspeise><u>Nachspeise:</u><br/>
+    <speise>Eis</speise>
+    <preis>500<br/></preis>
+</Nachspeise>
+<Getränke><u>Getränke:</u><br/>
+<trinken>Cola</trinken>
+<preis>320<br/></preis>
+</Getränke>
+</Speisekarte>

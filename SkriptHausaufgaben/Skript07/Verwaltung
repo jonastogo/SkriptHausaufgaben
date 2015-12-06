@@ -90,8 +90,10 @@ def newbe():
     benutzer.append((x,split[0],split[1]))#HIER FEHLT NOCH WAS!!!!! KANN NICHT BENUTZT WERDEN
     benutzerlist.insert("end",split[0]+", "+split[1])
     text2.delete(0,"end")
+
 def auswahlaus():
     ausgabe3["text"]="Auswahl: "+ausleihlist.get("active")
+
 def ausleihe():
     lt=localtime()
     jahr,monat,tag=lt[0:3]
