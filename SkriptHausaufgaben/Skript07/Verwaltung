@@ -90,8 +90,10 @@ def newbe():
     benutzer.append((x,split[0],split[1]))#HIER FEHLT NOCH WAS!!!!! KANN NICHT BENUTZT WERDEN
     benutzerlist.insert("end",split[0]+", "+split[1])
     text2.delete(0,"end")
+
 def auswahlaus():
     ausgabe3["text"]="Auswahl: "+ausleihlist.get("active")
+
 def ausleihe():
     lt=localtime()
     jahr,monat,tag=lt[0:3]
@@ -115,6 +117,21 @@ def ausleihe():
     ausgeliehen.append((split[0],split[1],split[2],split[3],split[4]))
     ausgabe2["text"]=""
     buchloeschen()
+
+def ruek():
+    pos=0
+    for i in range(len(ausgeliehen)):
+        z=ausgabe3["text"]
+        idx=int(i)-pos
+        if z=="Auswahl: "+ausgeliehen[i][0]+", "+ausgeliehen[i][1]+", "+ausgeliehen[i][2]+", "+ausgeliehen[i][3]+", "+ausgeliehen[i][4]:
+            x=ausgeliehen[i][0]+", "+ausgeliehen[i][1]
+            y=ausgeliehen[i][0],ausgeliehen[i][1]
+            print(x)
+            ausleihlist.delete(idx,idx)
+            ausgeliehen.remove(ausgeliehen[i])
+            buchlist.insert("end",x)
+            buch.append(y)
+            pos+=1
             
             
 #Programmstart
@@ -180,7 +197,7 @@ ausleihlist.grid(row=0,column=11,columnspan=5,sticky=W+E+N+S)
 auslen=tkinter.Button(main,text="Ausleihen",command=ausleihe)
 auslen.grid(row=3,column=12,sticky=W+E+N+S)
 
-ruekgabe=tkinter.Button(main,text="Rueckgabe",command="")
+ruekgabe=tkinter.Button(main,text="Rueckgabe",command=ruek)
 ruekgabe.grid(row=3,column=13,sticky=W+E+N+S)
 
 knopf=tkinter.Button(main, text="Ende",command=ende)
