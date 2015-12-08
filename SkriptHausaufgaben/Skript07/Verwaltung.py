@@ -2,6 +2,8 @@ from tkinter import *
 from time import *
 import tkinter
 import tkinter.scrolledtext
+def des():
+    main.destroy()
 
 def ende():
     buecher=open("Buch.txt","w")
@@ -15,7 +17,7 @@ def ende():
     ausleih=open("Ausgeliehen.txt","w")
     for i in range(len(ausgeliehen)):
         ausleih.write(ausgeliehen[i][0]+";"+ausgeliehen[i][1]+";"+ausgeliehen[i][2]+";"+ausgeliehen[i][3]+";"+ausgeliehen[i][4]+"\n")
-    main.destroy()
+    
 def load():
     fehler=0
     p=""
@@ -58,17 +60,21 @@ def buchloeschen():
                 buchlist.delete(idx,idx)
                 pos+=1
                 ausgabe1["text"]=""
+        ende()
     except:
         fehler=1
 
 def newbuch():
-    z=text1.get()
-    split=z.split(",")
-    buch.append((split[0],split[1]))
-    buchlist.insert("end",split[0]+", "+split[1])
-    text1.delete(0,"end")
-
-
+    try:
+        z=text1.get()
+        split=z.split(",")
+        buch.append((split[0],split[1]))
+        buchlist.insert("end",split[0]+", "+split[1])
+        text1.delete(0,"end")
+        ende()
+    except:
+        fehler=1
+        
 def auswahlbe():
     ausgabe2["text"]="Auswahl: "+benutzerlist.get("active")
 
@@ -81,43 +87,50 @@ def beloeschen():
             benutzer.remove(benutzer[i])
             benutzerlist.delete(idx,idx)
             pos+=1
-
+    ende()
+    
 def newbe():
-    z=text2.get()
-    split=z.split(",") 
-    x=len(benutzer)+1
-    x=str(x)
-    benutzer.append((x,split[0],split[1]))#HIER FEHLT NOCH WAS!!!!! KANN NICHT BENUTZT WERDEN
-    benutzerlist.insert("end",split[0]+", "+split[1])
-    text2.delete(0,"end")
-
+    try:
+        z=text2.get()
+        split=z.split(",") 
+        x=len(benutzer)+1
+        x=str(x)
+        benutzer.append((x,split[0],split[1]))#HIER FEHLT NOCH WAS!!!!! KANN NICHT BENUTZT WERDEN
+        benutzerlist.insert("end",split[0]+", "+split[1])
+        text2.delete(0,"end")
+        ende()
+    except:
+        fehler=1
 def auswahlaus():
     ausgabe3["text"]="Auswahl: "+ausleihlist.get("active")
 
 def ausleihe():
-    lt=localtime()
-    jahr,monat,tag=lt[0:3]
-    tag=str(tag)
-    monat=str(monat)
-    jahr=str(jahr)
-       
-    
-    x=ausgabe1["text"]
-    z=ausgabe2["text"]
-    for i in range(len(buch)):
-        if x == "Auswahl: "+buch[i][0]+", "+buch[i][1]:
-            x=buch[i][0]+", "+buch[i][1]  
-            
-    for i in range(len(benutzer)):
-        if z == "Auswahl: "+benutzer[i][1]+", "+benutzer[i][2]: 
-            z=benutzer[i][0]    
-    z=x+", "+z+", "+tag+"."+monat+"."+jahr+", "+"noch ausgeliehen"
-    split=z.split(", ")
-    ausleihlist.insert("end",z)
-    ausgeliehen.append((split[0],split[1],split[2],split[3],split[4]))
-    ausgabe2["text"]=""
-    buchloeschen()
-
+    try:    
+        lt=localtime()
+        jahr,monat,tag=lt[0:3]
+        tag=str(tag)
+        monat=str(monat)
+        jahr=str(jahr)
+           
+        
+        x=ausgabe1["text"]
+        z=ausgabe2["text"]
+        for i in range(len(buch)):
+            if x == "Auswahl: "+buch[i][0]+", "+buch[i][1]:
+                x=buch[i][0]+", "+buch[i][1]  
+                
+        for i in range(len(benutzer)):
+            if z == "Auswahl: "+benutzer[i][1]+", "+benutzer[i][2]: 
+                z=benutzer[i][0]    
+                z=x+", "+z+", "+tag+"."+monat+"."+jahr+", "+"noch ausgeliehen"
+        split=z.split(", ")
+        ausleihlist.insert("end",z)
+        ausgeliehen.append((split[0],split[1],split[2],split[3],split[4]))
+        ausgabe2["text"]=""
+        buchloeschen()
+    except:
+        fehler=1
+        
 def ruek():
     pos=0
     for i in range(len(ausgeliehen)):
@@ -132,7 +145,7 @@ def ruek():
             buchlist.insert("end",x)
             buch.append(y)
             pos+=1
-            
+    ende()
             
 #Programmstart
 
@@ -200,7 +213,7 @@ auslen.grid(row=3,column=12,sticky=W+E+N+S)
 ruekgabe=tkinter.Button(main,text="Rueckgabe",command=ruek)
 ruekgabe.grid(row=3,column=13,sticky=W+E+N+S)
 
-knopf=tkinter.Button(main, text="Ende",command=ende)
+knopf=tkinter.Button(main, text="Ende",command=des)
 knopf.grid(row=8,column=1,columnspan=16,sticky=W+E+N+S)
 
 auswahlau=tkinter.Button(main,text="Auswählen", command=auswahlaus)
