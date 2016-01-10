@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schuhliste
+[
+<!ELEMENT schuhliste (schuh+)>
+<!ELEMENT schuh (name,preis,bild,details)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name kategorie CDATA #REQUIRED
+>
+<!ELEMENT preis (#PCDATA)>
+<!ATTLIST preis
+einkaufspreis NMTOKEN #REQUIRED
+ladenpreis NMTOKEN #REQUIRED
+mwst NMTOKEN #IMPLIED
+>
+<!ELEMENT bild EMPTY>
+<!ATTLIST bild datei CDATA #REQUIRED
+>
+<!ELEMENT details (#PCDATA)>
+]>

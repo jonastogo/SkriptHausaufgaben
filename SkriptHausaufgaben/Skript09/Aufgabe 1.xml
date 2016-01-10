@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bild SYSTEM "Schuhliste.dtd">
+<schuhliste anzahl="1">
+	<schuh>
+		<name>Orthopäischer Schuh</name>
+		<preis>
+			<einkaufspreis>49,99€</einkaufspreis>
+			<ladenpreis>70,99€</ladenpreis>
+			<mwst>11,36€</mwst>
+		</preis>
+		<bild>foto.jpg</bild>
+		<details>Dieser Schuh ist besonders gut für die Füße</details>
+	</schuh>
+</schuhliste>
+		

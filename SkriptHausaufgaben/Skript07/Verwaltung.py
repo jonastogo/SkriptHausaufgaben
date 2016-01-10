@@ -60,7 +60,7 @@ def buchloeschen():
                 buchlist.delete(idx,idx)
                 pos+=1
                 ausgabe1["text"]=""
-        ende()
+                ende()
     except:
         fehler=1
 
@@ -87,7 +87,7 @@ def beloeschen():
             benutzer.remove(benutzer[i])
             benutzerlist.delete(idx,idx)
             pos+=1
-    ende()
+            ende()
     
 def newbe():
     try:
@@ -101,6 +101,7 @@ def newbe():
         ende()
     except:
         fehler=1
+        
 def auswahlaus():
     ausgabe3["text"]="Auswahl: "+ausleihlist.get("active")
 
