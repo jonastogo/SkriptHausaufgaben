@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE kundenliste
+[
+<!ELEMENT kundenliste(VIP*,Standart*)>
+<!ELEMENT VIP (Kunde*)>
+<!ELEMENT Kunde(name,Straße,Hausnummer,PLZ,Ort,Ansprechpartnerliste*,Betreuer+,Bemerkung)>
+<!ELEMENT name(#PCDATA)>
+<!ATTLIST name kategorie CDATA #REQUIRED > 
+<!ELEMENT Straße(#PCDATA)>
+<!ELEMENT Hausnummer(#PCDATA)>
+<!ELEMENT PLZ(#PCDATA)>
+<!ELEMENT Ort(#PCDATA)>
+<!ELEMENT Ansprechpartnerliste (Ansprechpartner*)>
+<!ELEMENT Anprechpartner (name,vorname,position,Telefonnummer)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT Telefonnummer (#PCDATA)>
+<!ELEMENT Betreuer(name,vorname)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT Bemerkung(#PCDATA)>
+<!ATTLIST Bemerkung kategorie CDATA #REQUIRED > 	
+
+<!ELEMENT Standart (Kunde*)>
+<!ELEMENT Kunde(name,Straße,Hausnummer,PLZ,Ort,Ansprechpartnerliste*,Betreuer+,Bemerkung)>
+<!ELEMENT name(#PCDATA)>
+<!ATTLIST name kategorie CDATA #REQUIRED > 
+<!ELEMENT Straße(#PCDATA)>
+<!ELEMENT Hausnummer(#PCDATA)>
+<!ELEMENT PLZ(#PCDATA)>
+<!ELEMENT Ort(#PCDATA)>
+<!ELEMENT Ansprechpartnerliste (Ansprechpartner*)>
+<!ELEMENT Anprechpartner (name,vorname,position,Telefonnummer)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT Telefonnummer (#PCDATA)>
+<!ELEMENT Betreuer(name,vorname)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT Bemerkung(#PCDATA)>
+<!ATTLIST Bemerkung kategorie CDATA #REQUIRED > 	
+
+]>

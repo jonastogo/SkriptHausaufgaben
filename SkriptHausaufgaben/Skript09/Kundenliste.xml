@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Kundenliste anzahl="2">
+
+<kundenliste>
 	<VIP>
 		<Kunde>
 			<name>Baxter</name>
@@ -45,4 +46,4 @@
 		</Kunde>
 	</Standart>
 	
-</Kundenliste>
+</kundenliste>
