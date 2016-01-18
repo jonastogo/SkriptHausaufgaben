@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="kundenliste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Kunde" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Kunde">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="Straße" type="xs:string"/>
+        <xs:element name="Hausnummer" type="xs:integer"/>
+        <xs:element name="PLZ" type="xs:integer"/>
+        <xs:element name="Ort" type="xs:string"/>
+        <xs:element ref="Ansprechpartnerliste"/>
+        <xs:element ref="Betreuer"/>
+        <xs:element name="Bemerkung" type="xs:string"/>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxInclusive value="80">
+				</xs:restriction>
+			</xs:simpleType>
+      </xs:sequence>
+      <xs:attribute name="kategorie" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ansprechpartnerliste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Ansprechpartner"/>
+      </xs:sequence>
+      <xs:attribute name="anzahl" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ansprechpartner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="vorname" type="xs:string"/>
+        <xs:element name="position" type="xs:string"/>
+        <xs:element name="Telefonnummer" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Betreuer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="vorname" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

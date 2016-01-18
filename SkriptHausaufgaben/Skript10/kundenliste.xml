@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kundenliste>
+	<Kunde kategorie="Vip">
+		<name>Baxter</name>
+		<Straße>Kantstraße</Straße>
+		<Hausnummer>2</Hausnummer>
+		<PLZ>33790</PLZ>
+		<Ort>Halle</Ort>
+		<Ansprechpartnerliste anzahl="1">
+			<Ansprechpartner>
+				<name>Muster</name>
+				<vorname>Peter</vorname>
+				<position>Abteilungsleiter Entwicklung</position>
+				<Telefonnummer>01645863138546</Telefonnummer>	
+			</Ansprechpartner>			
+		</Ansprechpartnerliste>
+		<Betreuer>
+			<name>Peters</name>
+			<vorname>Hans</vorname>
+		</Betreuer>
+		<Bemerkung></Bemerkung>
+	</Kunde>
+	<Kunde kategorie="Standart">
+		<name>Baxter</name>
+		<Straße>Kantstraße</Straße>
+		<Hausnummer>2</Hausnummer>
+		<PLZ>33790</PLZ>
+		<Ort>Halle</Ort>
+		<Ansprechpartnerliste anzahl="1">
+			<Ansprechpartner>
+				<name>Muster</name>
+				<vorname>Peter</vorname>
+				<position>Abteilungsleiter Entwicklung</position>
+				<Telefonnummer>01645863138546</Telefonnummer>	
+			</Ansprechpartner>			
+		</Ansprechpartnerliste>
+		<Betreuer>
+			<name>Peters</name>
+			<vorname>Hans</vorname>
+		</Betreuer>
+		<Bemerkung></Bemerkung>
+	</Kunde>	
+</kundenliste>

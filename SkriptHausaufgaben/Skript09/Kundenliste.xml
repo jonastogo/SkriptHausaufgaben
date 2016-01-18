@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bild SYSTEM "kundenliste.dtd">
 <kundenliste>
-	<VIP>
 		<Kunde>
 			<name>Baxter</name>
 			<Straße>Kantstraße</Straße>
@@ -22,8 +21,6 @@
 			</Betreuer>
 			<Bemerkung></Bemerkung>
 		</Kunde>
-	</VIP>	
-	<Standart>
 		<Kunde>
 			<name>Baxter</name>
 			<Straße>Kantstraße</Straße>
@@ -43,7 +40,5 @@
 				<vorname>Hans</vorname>
 			</Betreuer>
 			<Bemerkung></Bemerkung>
-		</Kunde>
-	</Standart>
-	
+		</Kunde>	
 </kundenliste>
